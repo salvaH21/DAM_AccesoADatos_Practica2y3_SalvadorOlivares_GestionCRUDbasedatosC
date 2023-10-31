@@ -7,9 +7,11 @@ int main(int argc,char *argv[]){
     
     //MENU
     printf("Con que quieres trabajar? Juegos o peliculas? \n");
-    char nombrearchivo[] = getchar();
-    printf("%s \n",nombrearchivo);
-    /*char ruta[100];
+    char nombrearchivo[10];
+    scanf("%s",nombrearchivo);
+    printf("Quieres trabajar con: %s \n",nombrearchivo);
+    getchar();
+    char ruta[100];
     strcpy(ruta,basededatos);
     strcat(ruta,"-");
     strcat(ruta,nombrearchivo);
@@ -23,6 +25,7 @@ int main(int argc,char *argv[]){
     printf("Escribe una opcion(1-4): \n");
     char opcion = getchar();
     printf("Has elegido: %c \n",opcion);
+    getchar();
     
     switch(opcion){
         case '1':
@@ -32,7 +35,9 @@ int main(int argc,char *argv[]){
             printf("INTRODUCIR ELEMENTO \n");
             printf("Introduce el titulo \n");
             archivo = fopen(ruta,"a");
-            char *titulo = argv[2];
+            char titulo[30];
+            scanf("%[^\n]",titulo);
+            printf("Titulo: %s \n",titulo);
             fputs(strcat(titulo,"\n"),archivo);
             fclose(archivo);
             printf("Titulo introducido \n");
@@ -45,7 +50,7 @@ int main(int argc,char *argv[]){
             break;
         default:
             printf("OPCION NO VALIDA \n");
-    }*/
+    }
     printf("FIN \n");
     return 0;
 }
