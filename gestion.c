@@ -35,6 +35,7 @@ int main(int argc,char *argv[]){
             while(fgets(linea,sizeof(linea),archivo)!= NULL){
                 printf("- %s",linea);
             }
+            fclose(archivo);
             break;
         case '2':
             printf("INTRODUCIR ELEMENTO \n");
