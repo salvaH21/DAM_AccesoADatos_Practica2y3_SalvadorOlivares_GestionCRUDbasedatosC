@@ -29,7 +29,12 @@ int main(int argc,char *argv[]){
     
     switch(opcion){
         case '1':
-            printf("LISTA \n");
+            printf("TITULOS: \n");
+            archivo = fopen(ruta,"r");
+            char linea[1024];
+            while(fgets(linea,sizeof(linea),archivo)!= NULL){
+                printf("- %s",linea);
+            }
             break;
         case '2':
             printf("INTRODUCIR ELEMENTO \n");
