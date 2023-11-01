@@ -49,7 +49,23 @@ int main(int argc,char *argv[]){
             printf("Titulo introducido \n");
             break;
         case '3':
-            printf("BUSCAR ELEMENTO \n");
+            /*printf("BUSCAR ELEMENTO \n");
+            printf("Introduce el titulo que buscas \n");
+            archivo = fopen(ruta,"r");
+            char titulobuscar[30];
+            scanf("%[^\n]",titulobuscar);
+            printf("Titulo: %s \n",titulobuscar);
+            char lineabuscar[100];
+            while(fgets(lineabuscar,sizeof(lineabuscar),archivo)!= NULL){
+                //printf("- %s",lineabuscar);
+                if(strcmp(titulobuscar,lineabuscar)==0){
+                    printf("Juego encontrado \n");
+                    printf("- %s",lineabuscar);
+                }else{
+                    printf("Juego no encontrado \n");
+                }
+            }
+            fclose(archivo);*/
             break;
         case '4':
             printf("ELIMINAR ELEMENTO \n");
@@ -87,8 +103,8 @@ int main(int argc,char *argv[]){
             }
             printf("Indice: %i \n",indice);
             printf("Eleccion: %c \n",eleccion);
-            fclose(archivo);
-            break;*/
+            fclose(archivo);*/
+            break;
         default:
             printf("OPCION NO VALIDA \n");
     }
