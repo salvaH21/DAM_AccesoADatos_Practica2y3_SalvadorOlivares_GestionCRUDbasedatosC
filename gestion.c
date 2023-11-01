@@ -20,8 +20,8 @@ int main(int argc,char *argv[]){
     printf("Elige una opcion: \n");
     printf("\t 1 - Ver lista \n");
     printf("\t 2 - Introducir elemento \n");
-    printf("\t 3 - Eliminar elemento \n");
-    printf("\t 4 - Modificar elemento \n");
+    printf("\t 3 - Buscar elemento \n");
+    printf("\t 4 - Eliminar elemento \n");
     printf("Escribe una opcion(1-4): \n");
     char opcion = getchar();
     printf("Has elegido: %c \n",opcion);
@@ -31,8 +31,8 @@ int main(int argc,char *argv[]){
         case '1':
             printf("TITULOS: \n");
             archivo = fopen(ruta,"r");
-            char linea[1024];
-            while(fgets(linea,sizeof(linea),archivo)!= NULL){
+            char linea[100];
+            while(fgets(linea,100,archivo)!= NULL){
                 printf("- %s",linea);
             }
             fclose(archivo);
@@ -49,11 +49,46 @@ int main(int argc,char *argv[]){
             printf("Titulo introducido \n");
             break;
         case '3':
-            printf("ELIMINAR ELEMENTO \n");
+            printf("BUSCAR ELEMENTO \n");
             break;
         case '4':
-            printf("MODIFICAR ELEMENTO \n");
-            break;
+            printf("ELIMINAR ELEMENTO \n");
+            /*archivo = fopen(ruta,"r");
+            char fila[100];
+            int indice=0;
+            while(fgets(fila,100,archivo)!= NULL){
+                indice++;
+                printf("%i - %s",indice,fila);
+            }
+            printf("Escribe el indice del elemento que quieres eliminar \n");
+            int eleccion = getchar();
+            printf("Has elegido: %c \n",eleccion);*/
+            //getchar();
+            /*indice=0;
+            archivo = fopen(ruta,"r");
+            while(fgets(fila,100,archivo)!= NULL){
+                indice++;
+                if(indice==eleccion){
+                    //printf("%i - %s",indice,fila);
+                    printf("Indice: %i",indice);
+                    printf("Eleccion: %c",eleccion);
+                }
+            }*/
+            /*archivo = fopen(ruta,"r");
+            for(int i=1;i<=10;i++){
+                if(fgets(fila,100,archivo)!= NULL){
+                    printf("Con FOR  %i - %s",i,fila);
+                    /*if(i==eleccion){
+                        printf("%i - %s",i,fila);
+                        printf("Indice: %i",i);
+                        printf("Eleccion: %c",eleccion);
+                    }*/
+           /*     }
+            }
+            printf("Indice: %i \n",indice);
+            printf("Eleccion: %c \n",eleccion);
+            fclose(archivo);
+            break;*/
         default:
             printf("OPCION NO VALIDA \n");
     }
