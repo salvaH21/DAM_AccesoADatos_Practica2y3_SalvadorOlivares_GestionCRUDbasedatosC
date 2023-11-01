@@ -2,3 +2,5 @@ mario
 tetris
 metal gear solid
 dark souls
+bloodborne
+la cosa
