@@ -46,7 +46,7 @@ int main(int argc,char *argv[]){
         case '2':
             printf("INTRODUCIR ELEMENTO \n");
             printf("Introduce el texto \n");
-            archivo = fopen(ruta,"a");
+            archivo = fopen(ruta,"w");
             char texto[30];
             scanf("%[^\n]",texto);
             fputs(strcat(texto,"\n"),archivo);
